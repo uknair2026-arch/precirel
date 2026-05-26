@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreciRel Vaimanik Solutions - Precision Machining & High-Strength Fasteners</title>
+  <meta name="description" content="Advanced custom manufacturing, CNC machining, high-speed cold heading, and high-precision aerospace fasteners. From blueprint to bulk production.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="#" class="logo-link">
+        <img src="assets/logo.png" alt="PreciRel Vaimanik Solutions Logo" class="logo-img">
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+          <li><a href="#catalog" class="nav-link">Components</a></li>
+          <li><a href="#process" class="nav-link">Our Process</a></li>
+          <li><a href="#vision" class="nav-link">Vision & Mission</a></li>
+          <li><a href="#technical" class="nav-link">Advantage</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-cta"><a href="#hero" class="btn btn-primary" id="nav-rfq-trigger">Launch RFQ</a></li>
+        </ul>
+      </nav>
+      
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO BANNER & COMPACT RFQ INTEGRATION
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Text & Caption -->
+        <div class="hero-content">
+          <span class="badge">Advanced Engineering</span>
+          <h1 class="hero-title">
+            From Blueprint to Bulk Production.<br>
+            <span class="hero-subtitle">Absolute Integrity. Seamlessly Engineered.</span>
+          </h1>
+          <p class="hero-desc">PreciRel Vaimanik Solutions delivers advanced custom manufacturing and high-precision fasteners built for critical environments where failure is not an option.</p>
+          <div class="hero-buttons">
+            <a href="#catalog" class="btn btn-secondary">Explore Catalog</a>
+            <a href="#contact" class="btn btn-blue">Talk to an Engineer</a>
+          </div>
+        </div>
+        
+        <!-- Compact RFQ Widget (1/4 of Hero Area) -->
+        <div class="rfq-widget" id="rfq-widget">
+          <h3><i class="fas fa-file-invoice"></i> Fast RFQ Engine</h3>
+          <p>Get a manufacturing quote within 24 hours. Upload drawings (PDF/DXF/STEP/PNG).</p>
+          
+          <form class="rfq-form-compact" id="rfq-form" action="#" method="POST">
+            <!-- Material & Qty Row -->
+            <div class="rfq-form-row-compact">
+              <div class="rfq-group-compact">
+                <label for="rfq-material" class="rfq-label-compact">Material</label>
+                <select id="rfq-material" class="rfq-input-compact" required>
+                  <option value="" disabled selected>Select Grade</option>
+                  <option value="titanium-gr5">Titanium Grade 5</option>
+                  <option value="inconel-718">Inconel 718</option>
+                  <option value="ss-316">Stainless Steel 316</option>
+                  <option value="alloy-4140">Alloy Steel 4140</option>
+                  <option value="brass">Industrial Brass</option>
+                  <option value="other">Other / Custom</option>
+                </select>
+              </div>
+              <div class="rfq-group-compact">
+                <label for="rfq-qty" class="rfq-label-compact">Est. Qty</label>
+                <input type="number" id="rfq-qty" class="rfq-input-compact" placeholder="PCS" min="1" required>
+              </div>
+            </div>
+            
+            <!-- Contact Email Info -->
+            <div class="rfq-group-compact">
+              <label for="rfq-email" class="rfq-label-compact">Your Email</label>
+              <input type="email" id="rfq-email" class="rfq-input-compact" placeholder="procurement@company.com" required>
+            </div>
+            
+            <!-- Compact File Upload Area -->
+            <div class="rfq-group-compact">
+              <label class="rfq-label-compact">Drawing / Diagram</label>
+              <div class="rfq-upload-compact" id="rfq-upload-zone">
+                <i class="fas fa-cloud-upload-alt rfq-upload-icon-compact"></i>
+                <div class="rfq-upload-text-compact">
+                  <span>Click to upload</span> or drag files
+                </div>
+                <input type="file" id="rfq-file" class="rfq-file-input" accept=".pdf,.dxf,.step,.stp,.igs,.png,.jpg,.jpeg">
+              </div>
+              <!-- File display box -->
+              <div class="rfq-file-preview-compact" id="rfq-file-preview">
+                <span id="rfq-file-name">drawing_rev1.pdf</span>
+                <span class="rfq-file-remove" id="rfq-file-remove" title="Remove file">&times;</span>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary rfq-submit-compact">Submit Quote Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TRUSTED BY SECTION
+       ========================================================================== -->
+  <section class="trusted-section">
+    <div class="container">
+      <h3 class="trusted-title">Empowering Enterprise Procurement Globally</h3>
+      <div class="trusted-logos">
+        <div class="trusted-logo"><i class="fas fa-plane"></i> Aerospace</div>
+        <div class="trusted-logo"><i class="fas fa-shield-halved"></i> Defense</div>
+        <div class="trusted-logo"><i class="fas fa-microchip"></i> High-Tech</div>
+        <div class="trusted-logo"><i class="fas fa-car-side"></i> Automotive</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CAPABILITIES
+       ========================================================================== -->
+  <section class="section alt-bg" id="capabilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Capabilities</span>
+        <h2>Engineering Excellence</h2>
+        <p>Our facility combines advanced machining systems with exhaustive QA standards to supply precision components globally.</p>
+      </div>
+      
+      <div class="capabilities-grid">
+        <!-- CNC Machining -->
+        <div class="capability-card">
+          <div class="capability-icon-box">
+            <i class="fas fa-screwdriver-wrench"></i>
+          </div>
+          <h3>CNC Machining</h3>
+          <p>High-precision multi-axis milling and turning centers. We machine complex components to tight dimensional tolerances (+/- 0.005mm) for aerospace and industrial assemblies.</p>
+        </div>
+        
+        <!-- Cold Heading -->
+        <div class="capability-card">
+          <div class="capability-icon-box">
+            <i class="fas fa-fire-burner"></i>
+          </div>
+          <h3>Cold Heading</h3>
+          <p>High-speed, high-volume production of fasteners and socket products. Cold heading improves grain flow and material strength while reducing waste and procurement costs.</p>
+        </div>
+        
+        <!-- Aero-Titanium Fasteners -->
+        <div class="capability-card">
+          <div class="capability-icon-box">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Titanium Fasteners</h3>
+          <p>Aerospace-grade high-strength fasteners manufactured from Titanium Grade 5 (Ti-6Al-4V), Inconel, and custom superalloys. Optimized for high strength-to-weight ratio and corrosion resistance.</p>
+        </div>
+        
+        <!-- Complex Geometries -->
+        <div class="capability-card">
+          <div class="capability-icon-box">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h3>Complex Geometries</h3>
+          <p>Conversion of advanced, intricate design blueprints into high-precision custom fittings, connectors, and specialized fasteners that standard catalog items cannot match.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       COMPONENT CATALOG
+       ========================================================================== -->
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Catalog</span>
+        <h2>Precision Component Catalog</h2>
+        <p>A sample of custom fastening solutions and engineered components fabricated at our Hyderabad plant.</p>
+      </div>
+      
+      <!-- Filter controls -->
+      <div class="catalog-filters">
+        <button class="filter-btn active" data-filter="all">All Components</button>
+        <button class="filter-btn" data-filter="fasteners">Fasteners</button>
+        <button class="filter-btn" data-filter="machined">Machined Parts</button>
+      </div>
+      
+      <div class="catalog-grid" id="catalog-grid">
+        <!-- Titanium Bolt -->
+        <div class="catalog-card" data-category="fasteners">
+          <div class="catalog-img-wrapper">
+            <img src="assets/titanium-bolt.png" alt="Aero-Titanium Internal Hex Bolt" class="catalog-img">
+          </div>
+          <div class="catalog-content">
+            <span class="catalog-category">Fasteners</span>
+            <h3>Aero-Titanium Internal Hex Bolt</h3>
+            <p class="catalog-desc">Engineered for weight-critical aerospace and marine structures. Superior strength and extreme corrosion resistance.</p>
+            <ul class="catalog-specs">
+              <li><span>Material:</span> <span>Titanium Grade 5 (Ti-6Al-4V)</span></li>
+              <li><span>Tolerance:</span> <span>+/- 0.01 mm</span></li>
+              <li><span>Thread Class:</span> <span>MIL-S-8879 / UNJ Class 3A</span></li>
+            </ul>
+            <button class="btn catalog-btn" data-component="Aero-Titanium Internal Hex Bolt">Select for Quote</button>
+          </div>
+        </div>
+        
+        <!-- Turbine Fastener -->
+        <div class="catalog-card" data-category="fasteners">
+          <div class="catalog-img-wrapper">
+            <img src="assets/turbine-fastener.png" alt="Inconel Turbine Fastener" class="catalog-img">
+          </div>
+          <div class="catalog-content">
+            <span class="catalog-category">Fasteners</span>
+            <h3>Inconel Turbine Fastener</h3>
+            <p class="catalog-desc">Heavy-duty heat-resistant fastening component engineered specifically for turbine housings and extreme thermal cycling.</p>
+            <ul class="catalog-specs">
+              <li><span>Material:</span> <span>Inconel 718 / 625</span></li>
+              <li><span>Temp Range:</span> <span>Up to 700°C (1300°F)</span></li>
+              <li><span>Tensile Strength:</span> <span>150,000 PSI min</span></li>
+            </ul>
+            <button class="btn catalog-btn" data-component="Inconel Turbine Fastener">Select for Quote</button>
+          </div>
+        </div>
+        
+        <!-- Hammellc Machined Fastener -->
+        <div class="catalog-card" data-category="fasteners">
+          <div class="catalog-img-wrapper">
+            <img src="assets/machined-fastener.png" alt="Hammellc Machined Fastener" class="catalog-img">
+          </div>
+          <div class="catalog-content">
+            <span class="catalog-category">Fasteners</span>
+            <h3>Hammellc Machined Fastener</h3>
+            <p class="catalog-desc">High-load custom structural socket bolt, fabricated through cold-heading and precision thread-rolling operations.</p>
+            <ul class="catalog-specs">
+              <li><span>Material:</span> <span>Alloy Steel 4140</span></li>
+              <li><span>Hardness:</span> <span>38-42 HRC (Grade 12.9)</span></li>
+              <li><span>Finish:</span> <span>Black Oxide / Zinc Flake</span></li>
+            </ul>
+            <button class="btn catalog-btn" data-component="Hammellc Machined Fastener">Select for Quote</button>
+          </div>
+        </div>
+        
+        <!-- Socket Bolt -->
+        <div class="catalog-card" data-category="machined">
+          <div class="catalog-img-wrapper">
+            <img src="assets/socket-bolt.png" alt="Complex Machined Socket Bolt" class="catalog-img">
+          </div>
+          <div class="catalog-content">
+            <span class="catalog-category">Machined Parts</span>
+            <h3>Complex Machined Socket Bolt</h3>
+            <p class="catalog-desc">Multifunctional aerospace flange bolt with custom socket head details, CNC-machined from single-bar stock.</p>
+            <ul class="catalog-specs">
+              <li><span>Material:</span> <span>Stainless Steel 316L / 17-4 PH</span></li>
+              <li><span>Machining:</span> <span>5-Axis CNC Milling</span></li>
+              <li><span>Certification:</span> <span>EN10204 3.1 Traceability</span></li>
+            </ul>
+            <button class="btn catalog-btn" data-component="Complex Machined Socket Bolt">Select for Quote</button>
+          </div>
+        </div>
+        
+        <!-- Threaded Stud -->
+        <div class="catalog-card" data-category="machined">
+          <div class="catalog-img-wrapper">
+            <img src="assets/threaded-stud.png" alt="Precision Threaded Stud" class="catalog-img">
+          </div>
+          <div class="catalog-content">
+            <span class="catalog-category">Machined Parts</span>
+            <h3>Precision Threaded Stud</h3>
+            <p class="catalog-desc">Double-ended high-precision threaded stud for mechanical joining assemblies requiring tight alignment tolerances.</p>
+            <ul class="catalog-specs">
+              <li><span>Material:</span> <span>Stainless Steel 304 / Carbon Steel</span></li>
+              <li><span>Thread Pitch:</span> <span>Metric & UNC Available</span></li>
+              <li><span>Testing:</span> <span>UT & Magnetic Particle Audit</span></li>
+            </ul>
+            <button class="btn catalog-btn" data-component="Precision Threaded Stud">Select for Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PRODUCTION PROCESS (TIMELINE)
+       ========================================================================== -->
+  <section class="section dark-bg" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Production</span>
+        <h2>Our Production Process</h2>
+        <p>A rigorous, systematic engineering flow that guarantees dimensional precision and metallurgical integrity.</p>
+      </div>
+      
+      <div class="process-timeline">
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="process-number">01</div>
+          <h3>DFM Review</h3>
+          <p>Every engineering drawing undergoes rigorous Design for Manufacturability review, optimizing machining cycles and procurement feasibility.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="process-number">02</div>
+          <h3>Precision Production</h3>
+          <p>Production runs on state-of-the-art multi-axis CNC machines and cold/hot headers to execute blueprints with tight tolerance control.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="process-number">03</div>
+          <h3>Rigorous QA</h3>
+          <p>100% inspections via coordinate measuring machines (CMM) and exhaustive metallurgical, tensile, and hardness testing.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="process-number">04</div>
+          <h3>Global Delivery</h3>
+          <p>Secure industrial packaging, complete materials traceability records (EN 10204 3.1), and rapid logistical dispatch worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VISION & MISSION
+       ========================================================================== -->
+  <section class="section" id="vision">
+    <div class="container">
+      <div class="vm-container">
+        <!-- Vision Statement Quote Box -->
+        <div class="vm-quote-side">
+          <i class="fas fa-quote-left vm-quote-icon"></i>
+          <blockquote>
+            "To be the definitive global benchmark for precision-engineered components, empowering industries where failure is not an option."
+          </blockquote>
+          <cite>Corporate Vision - PreciRel Vaimanik Solutions</cite>
+        </div>
+        
+        <!-- Mission Statement Content -->
+        <div class="vm-content-side">
+          <div class="vm-block">
+            <h3><i class="fas fa-shield-alt"></i> Corporate Mission</h3>
+            <p>PreciRel Vaimanik Solutions delivers advanced custom manufacturing and high precision fastening solutions that meet the world’s most stringent quality standards. We convert complex engineering designs into reliable physical components—safeguarding production continuity and enterprise procurement timelines globally.</p>
+          </div>
+          
+          <div class="vm-block accent">
+            <h3><i class="fas fa-vial"></i> Metallurgical Security</h3>
+            <p>Through state-of-the-art machining, high-speed cold/hot heading, and exhaustive metallurgical testing, we analyze internal microstructures, tensile strength limits, and hardness ratings to ensure zero deviations from material guidelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECHNICAL ADVANTAGE / STATS SECTION (REPLACES GENERIC IMAGE)
+       ========================================================================== -->
+  <section class="section alt-bg" id="technical">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Advantage</span>
+        <h2>Technical Advantage & Quality</h2>
+        <p>Why Tier-1 aerospace, defense, and high-tech enterprises rely on PreciRel Vaimanik Solutions.</p>
+      </div>
+      
+      <div class="stats-layout">
+        <!-- Interactive statistics cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-target="500000">500K+</div>
+            <div class="stat-label">Fasteners Shipped</div>
+            <div class="stat-desc">Annual custom manufacturing capacity</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">0.005mm</div>
+            <div class="stat-label">Precision Tolerances</div>
+            <div class="stat-desc">Executed on 5-axis CNC machines</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="100">100%</div>
+            <div class="stat-label">Metallurgical Testing</div>
+            <div class="stat-desc">Tensile strength & micro-structure audit</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">0 PPM</div>
+            <div class="stat-label">Defect Target</div>
+            <div class="stat-desc">In conformance with AS9100 criteria</div>
+          </div>
+        </div>
+        
+        <!-- Certifications list -->
+        <div class="cert-grid">
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fas fa-award"></i></div>
+            <div class="cert-info">
+              <h4>ISO 9001:2015 Certification</h4>
+              <p>Adherence to international standards for quality management systems and operational process optimization.</p>
+            </div>
+          </div>
+          <div class="cert-item orange">
+            <div class="cert-icon"><i class="fas fa-file-signature"></i></div>
+            <div class="cert-info">
+              <h4>AS9100 Compliance Standards</h4>
+              <p>Manufacturing protocols aligned with the aerospace industry's most rigorous quality, risk, and configuration requirements.</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fas fa-microscope"></i></div>
+            <div class="cert-info">
+              <h4>Exhaustive Traceability Audit</h4>
+              <p>Every single shipment includes raw material mill certs, heat-treat records, and EN 10204 3.1 chemical & physical test documents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT FORM & INFO SECTION
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-section-grid">
+        <!-- Left Side: Contact Information -->
+        <div class="contact-info-block">
+          <div>
+            <span class="badge">Get in Touch</span>
+            <h2 style="font-size: 2.25rem; margin-top: 0.5rem; margin-bottom: 1rem;">Contact Procurement</h2>
+            <p style="color: var(--text-medium); line-height: 1.6;">Our engineering division is ready to discuss your product specs, tolerances, and procurement schedule. Drop us a note or call our Hyderabad office directly.</p>
+          </div>
+          
+          <div class="contact-details">
+            <!-- Address -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail-info">
+                <h4>Hyderabad Plant Office</h4>
+                <p>Precirel Vaimanik Solutions Pvt Ltd,<br>Plot No.124, Co-op. Industrial Estate,<br>Gandhi Nagar, Hyderabad - 500 038</p>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-detail-info">
+                <h4>Direct Procurement Line</h4>
+                <p>+91 91332 13878</p>
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail-info">
+                <h4>Technical Engineering Support</h4>
+                <p>tech@pvs.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form-box">
+          <h3>Inquire about Custom Machining</h3>
+          <form class="contact-form-elements" id="contact-form" action="#" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-company" class="form-label">Company</label>
+                <input type="text" id="contact-company" class="form-input" placeholder="Aerospace Corp" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Work Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="j.doe@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Phone Number</label>
+                <input type="tel" id="contact-phone" class="form-input" placeholder="+91 98765 43210" required>
+              </div>
+              <div class="form-group form-group-full">
+                <label for="contact-message" class="form-label">Message / Requirements</label>
+                <textarea id="contact-message" class="form-input" placeholder="Provide details on fastener sizes, material grade, quantities, or specific drawings..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Logo and Slogan -->
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="PreciRel Vaimanik Solutions Logo" class="footer-logo">
+          <p>High-precision fastening solutions and advanced custom machining. Grounded in absolute integrity and seamless engineering.</p>
+        </div>
+        
+        <!-- Navigation Column -->
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#catalog">Component Catalog</a></li>
+            <li><a href="#process">Production Process</a></li>
+          </ul>
+        </div>
+        
+        <!-- Technical Advantage Column -->
+        <div class="footer-links-col">
+          <h4>Advantage</h4>
+          <ul class="footer-links">
+            <li><a href="#vision">Vision & Mission</a></li>
+            <li><a href="#technical">Quality Standards</a></li>
+            <li><a href="#contact">Contact Form</a></li>
+            <li><a href="#hero">Request Quote</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Information Column -->
+        <div class="footer-links-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Plot No.124, Co-op. Industrial Estate, Gandhi Nagar, Hyderabad - 500 038</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 91332 13878</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>tech@pvs.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Copyright and Legal -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 PreciRel Vaimanik Solutions Pvt Ltd. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Quality Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       TOAST NOTIFICATION MODAL
+       ========================================================================== -->
+  <div class="toast" id="toast">
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+    <div class="toast-content">
+      <h5 id="toast-title">Request Submitted</h5>
+      <p id="toast-message">Our engineering division will review your files.</p>
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

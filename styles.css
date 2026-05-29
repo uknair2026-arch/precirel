@@ -250,10 +250,10 @@ button, input, select, textarea {
 }
 
 .logo-img {
-  height: 64px;
-  width: auto;
-  object-fit: contain;
-  transition: var(--transition);
+    height: 60px;       /* Increased from its current small size */
+    width: auto;        /* Keeps the aspect ratio perfectly sharp */
+    max-height: 100%;   /* Ensures it doesn't break your header layout */
+    object-fit: contain;
 }
 
 .header.scrolled .logo-img {
@@ -1210,10 +1210,10 @@ textarea.form-input {
 }
 
 .footer-logo {
-  height: 50px;
-  width: auto;
-  align-self: flex-start;
-  filter: brightness(1.05);
+    height: 50px;       /* Slightly smaller for the footer balance */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 .footer-brand p {
